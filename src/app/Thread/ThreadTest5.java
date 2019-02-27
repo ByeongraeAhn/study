@@ -3,7 +3,7 @@ package app.Thread;
 public class ThreadTest5 {
     public static void main(String args[]) {
 
-        Runnable runnable = new ThreadEx1_2();
+        Runnable runnable = new ThreadEx_5();
 
         Thread[] thread = make(runnable);
 
@@ -25,7 +25,7 @@ public class ThreadTest5 {
     }
 }
 
-class ThreadEx1_2 implements Runnable {
+class ThreadEx_5 implements Runnable {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName());
