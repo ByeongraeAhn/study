@@ -3,24 +3,19 @@ package app.Thread;
 import java.awt.Robot;
 
 public class ThreadTest6 {
+    //ThreadTest7과 속도비교 테스트
 
     public static void main(String args[]) {
 
-        for (int i = 0; i <30; i++) {
-            Thread thread = new ThreadEx_1(500+((i+1)*10));
-            thread.start();
+        Thread[] thread = new Thread[800];
+
+        for (int i = 0; i <800; i++) {
+            thread[i] = new ThreadEx_1(i+200);
         }
 
-
-        // Thread thread = new ThreadEx_1(500);
-        // thread.start();
-        
-        // Thread thread2 = new ThreadEx_1(600);
-        // thread2.start();
-
-        // Thread thread3 = new ThreadEx_1(700);
-        // thread3.start();
-
+        for (int i = 0; i <800; i++) {
+            thread[i].start();
+        }
 
          
         System.out.println("end");
@@ -39,16 +34,16 @@ class ThreadEx_1 extends Thread {
         }
     }
 
-    public int index;
+    public int x;
 
     public ThreadEx_1(int index) {
-        this.index = index;
+        this.x = index;
     }
 
     @Override
     public void run() {
-        for (int i = 1000; i < 1700; i++) {
-            robot.mouseMove(i, index);
+        for (int j = 200; j < 1000; j++) {
+            robot.mouseMove(x, j);
         }
     }
 }
