@@ -1,6 +1,6 @@
 package app.Algorithm;
 
-public class shift {
+public class Shift {
 	public static void main(String[] args) {
 		byte a = 10; // 00001010
 		byte b = 9; // 00001001
