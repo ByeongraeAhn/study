@@ -11,12 +11,9 @@ public class ThreadTest6 {
 
         for (int i = 0; i <800; i++) {
             thread[i] = new ThreadEx_1(i+200);
-        }
-
-        for (int i = 0; i <800; i++) {
             thread[i].start();
         }
-
+        
          
         System.out.println("end");
     }
