@@ -6,50 +6,61 @@ import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/user")
 public class HelloController {
 
     @Autowired
     UserRepository userRepository;
 
+    // curl -H "Content-Type: application/json" -X POST -d '{"firstName":"BR", "lastName":"AHN"}' http://localhost:8080/user
+    @PostMapping
+    public User save(@RequestBody User user) throws Exception {
 
-    // curl -H "Content-Type: application/json" -X POST -d '{"firstName":"BR", "lastName":"AHN"}' http://localhost:8080/save
-    @RequestMapping("/save")
-    public String save(@RequestBody User user) throws Exception {
-
-        System.out.println(userRepository.save(user));
-
-        return "insert Test";
+        User responseUser = userRepository.save(user);
+        return responseUser;
     }
 
-    // curl -H "Content-Type: application/json" -X GET http://localhost:8080/findall
-    @RequestMapping("/findall")
+    // curl -H "Content-Type: application/json" -X PUT -d '{"firstName":"KD", "lastName":"HONG"}' http://localhost:8080/user/1
+    @PutMapping("/{id}")
+    public User update(@PathVariable("id") Long id, @RequestBody User user) throws Exception {
+        user.setId(id);
+        User responseUser = userRepository.save(user);
+        return responseUser;
+    }
+
+    // curl -H "Content-Type: application/json" -X GET http://localhost:8080/user
+    @GetMapping
     public List<User> findall() throws Exception {
 
         List<User> customerList = userRepository.findAll();
-
         return customerList;
     }
 
-    // curl -H "Content-Type: application/json" -X POST -d '{"firstName":"BR", "lastName":"AHN"}' http://localhost:8080/findby
-    @RequestMapping("/findby")
-    public List<User> findby(@RequestBody User user) throws Exception {
+    // curl -H "Content-Type: application/json" -X GET http://localhost:8080/user/AHN
+    @GetMapping("/{lastName}")
+    public List<User> findby(@PathVariable("lastName") String lastName) throws Exception {
 
-        List<User> customerList = userRepository.findByLastName(user.getLastName());
+        List<User> customerList = userRepository.findByLastName(lastName);
         return customerList;
     }
 
 
-    // curl -H "Content-Type: application/json" -X POST -d '{"id":"1", "firstName":"BR", "lastName":"AHN"}' http://localhost:8080/delete
-    @RequestMapping("/delete")
-    public String delete (@RequestBody User user) throws Exception {
-        userRepository.delete(user);
+    // curl -H "Content-Type: application/json" -X DELETE http://localhost:8080/user/3
+    @DeleteMapping("/{id}")
+    public String delete (@PathVariable("id") Long id) throws Exception {
+        userRepository.deleteById(id);
 
-        return "delete Test";
+        return "Delete Success";
     }
     
 
