@@ -21,8 +21,7 @@ public class HelloController {
     @RequestMapping("/save")
     public String save(@RequestBody User user) throws Exception {
 
-        User a = userRepository.save(user);
-        System.out.println(a);
+        System.out.println(userRepository.save(user));
 
         return "insert Test";
     }
