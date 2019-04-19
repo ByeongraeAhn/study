@@ -42,16 +42,16 @@ public class HelloController {
     @GetMapping
     public List<User> findall() throws Exception {
 
-        List<User> customerList = userRepository.findAll();
-        return customerList;
+        List<User> userList = userRepository.findAll();
+        return userList;
     }
 
     // curl -H "Content-Type: application/json" -X GET http://localhost:8080/user/AHN
     @GetMapping("/{lastName}")
     public List<User> findby(@PathVariable("lastName") String lastName) throws Exception {
 
-        List<User> customerList = userRepository.findByLastName(lastName);
-        return customerList;
+        List<User> userList = userRepository.findByLastName(lastName);
+        return userList;
     }
 
 
