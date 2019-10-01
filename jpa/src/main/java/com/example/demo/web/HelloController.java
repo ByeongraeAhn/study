@@ -55,13 +55,7 @@ public class HelloController {
     }
 
 
-    // curl -H "Content-Type: application/json" -X DELETE http://localhost:8080/user/3
-    @DeleteMapping("/{id}")
-    public String delete (@PathVariable("id") Long id) throws Exception {
-        userRepository.deleteById(id);
 
-        return "Delete Success";
-    }
     
 
 }
