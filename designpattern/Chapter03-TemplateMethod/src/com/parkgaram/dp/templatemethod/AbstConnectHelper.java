@@ -2,13 +2,14 @@ package com.parkgaram.dp.templatemethod;
 
 public abstract class AbstConnectHelper {
 
-	abstract protected String doSecurity(String info);
+	//하위클래스에서 재정의해야되지만 외부에서 호출하면 안되므로 protected로 선언해야 한다.
+	protected abstract String doSecurity(String info);
 
-	abstract protected String authentication(String id, String password);
+	protected abstract String authentication(String id, String password);
 
-	abstract protected int authorization(String userName);
+	protected abstract int authorization(String userName);
 
-	abstract protected String connection(String info);
+	protected abstract String connection(String info);
 
 	public String requestConnection(String info) {
 

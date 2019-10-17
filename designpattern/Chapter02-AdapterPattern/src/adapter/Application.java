@@ -1,5 +1,8 @@
 package adapter;
 
+//연관성 없는 두 객체를 묶어서 사용한다.
+//AdapterImpl 클래스를 통해서 Math 라이브러리에 접근한다.
+//AdapterImpl를 통해서 Math 라이브러리에 사용하기 적합한 형태로 변환한다.
 public class Application {
 
 	
