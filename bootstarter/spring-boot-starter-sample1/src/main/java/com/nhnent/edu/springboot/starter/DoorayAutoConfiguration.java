@@ -11,10 +11,9 @@ import org.springframework.web.client.RestTemplate;
 
 
 /**
- * TODO (1)
  * 1) DoorayHookSender.class 가 Classpath 에 존재할때,
  * 2) dooray.hook-url 속성이 정의되어 있을때,
- * 동작하도록 설정 하세요.
+ * 동작
  */
 @Configuration
 //@ConditionalOnClass(DoorayHookSender.class) //클래스패스에 잡혀있으면...
@@ -26,9 +25,8 @@ public class DoorayAutoConfiguration {
     private DoorayProperties doorayProperties;
 
     /**
-     * TODO (2)
-     * RestTemplate type의 빈이 선언되어 있지 않으면 RestTemplate Bean을 생성하도록
-     * @ConditionalOnMissingBean 을 이용해서 코드를 작성하세요.
+     * RestTemplate type의 빈이 선언되어 있지 않으면 RestTemplate Bean을 생성
+     * @ConditionalOnMissingBean 을 이용
      */
     @ConditionalOnMissingBean(RestTemplate.class)
     @Bean
@@ -37,8 +35,7 @@ public class DoorayAutoConfiguration {
     }
 
     /**
-     * TODO (3)
-     * DoorayHookSender Bean 이 생성되도록 코드를 작성해 주세요.
+     * DoorayHookSender Bean 이 생성
      */
     @Bean
     public TestBean doorayHookSender(RestTemplate restTemplate) {
