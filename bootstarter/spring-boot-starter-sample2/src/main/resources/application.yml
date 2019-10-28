@@ -1,0 +1,4 @@
+spring.mvc.request-parameter-logging-filter:
+  enabled: true
+  level: DEBUG
+logging.level.RequestParameterLoggingFilter: ${spring.mvc.request-parameter-logging-filter.level}
