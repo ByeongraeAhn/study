@@ -2,9 +2,9 @@ package com.example.demo.web;
 
 import java.util.List;
 
+import com.anbr.BeanClass1;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
-import com.nhnent.edu.springboot.starter.TestBean;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class HelloController {
 	
+    // @Autowired
+    // private TestBean testBean;
+
     @Autowired
-    private TestBean testBean;
+    private BeanClass1 beanClass1;
 
     @Autowired
     UserRepository userRepository;
@@ -28,7 +31,8 @@ public class HelloController {
     // curl -H "Content-Type: application/json" -X GET http://localhost:8080/user
     @GetMapping
     public List<User> findall() throws Exception {
-        testBean.logApi();
+        // testBean.logApi();
+        System.out.println(beanClass1.getName());
         List<User> userList = userRepository.findAll();
         return userList;
     }

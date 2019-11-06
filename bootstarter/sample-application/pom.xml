@@ -20,17 +20,17 @@
 
 	<dependencies>
         <!-- 스타터 모듈 추가 -->
-        <dependency>
+        <!-- <dependency>
             <groupId>com.sample</groupId>
             <artifactId>spring-boot-starter-sample1</artifactId>
             <version>1.0.0</version>
-        </dependency>
+        </dependency> -->
 
-		<!-- <dependency>
+		<dependency>
             <groupId>com.sample</groupId>
             <artifactId>spring-boot-starter-sample2</artifactId>
             <version>1.0.0</version>
-        </dependency> -->
+        </dependency>
         
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,6 +52,7 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>

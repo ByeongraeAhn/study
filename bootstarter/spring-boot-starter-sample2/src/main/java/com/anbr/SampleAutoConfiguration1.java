@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @AutoConfigureAfter(WebMvcAutoConfiguration.class) // 1
 @EnableConfigurationProperties(RequestParameterLoggingFilterProperties.class) // 2
-public class SampleAutoConfiguration {
+public class SampleAutoConfiguration1 {
 
     @Autowired
     private RequestParameterLoggingFilterProperties requestParameterLoggingFilterProperties; 
