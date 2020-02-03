@@ -16,7 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .mvcMatchers("/","/info").permitAll()
+                .mvcMatchers("/","/info", "/account/**").permitAll()
                 .mvcMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
@@ -25,11 +25,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             .httpBasic();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("admin").password("{noop}1111").roles("ADMIN").and()
-                .withUser("user").password("{noop}1111").roles("USER");
-    }
+    //인메모리
+    // @Override
+    // protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    //     auth.inMemoryAuthentication()
+    //             .withUser("admin").password("{noop}1111").roles("ADMIN").and()
+    //             .withUser("user").password("{noop}1111").roles("USER");
+    // }
+
 
 }
