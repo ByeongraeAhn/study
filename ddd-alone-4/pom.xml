@@ -90,6 +90,13 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- <dependency>
+			<groupId>me.sargunvohra.lib</groupId>
+			<artifactId>pokekotlin</artifactId>
+			<version>2.3.0</version>
+		</dependency> -->
+		
 	</dependencies>
 
 	<build>
