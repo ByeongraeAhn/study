@@ -6,7 +6,7 @@ public class RambdaTest2 {
     public static void exec(Compare com) {
         int k = 10;
         int m = 20;
-        int value = com.compareTo(k, m);
+        int value = com.add(k, m);
         System.out.println(value);
     }
 
@@ -18,5 +18,5 @@ public class RambdaTest2 {
 }
 
 interface Compare {
-    public int compareTo(int a, int b);
+    public int add(int a, int b);
 }
