@@ -1,7 +1,7 @@
-package app.Rambda;
+package app.Lambda;
 
 // 람다 사용, 미사용 비교
-public class RambdaTest1 {
+public class LambdaTest1 {
     public static void main(String[] args) {
 
         // 람다식 미사용

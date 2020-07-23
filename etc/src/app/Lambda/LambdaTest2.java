@@ -1,7 +1,7 @@
-package app.Rambda;
+package app.Lambda;
 
 // 두개의 숫자 더하기
-public class RambdaTest2 {
+public class LambdaTest2 {
     // 람다식 문법 (매개변수 목록)->{실행문}
     public static void exec(Compare com) {
         int k = 10;
