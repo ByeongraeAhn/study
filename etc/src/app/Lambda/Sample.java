@@ -3,6 +3,7 @@ package app.Lambda;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
@@ -39,8 +40,9 @@ public class Sample {
         //Consumer
         //인자있음, 리턴 없음
         //Stream 인터페이스의 forEach 메서드는 void forEach(Consumer<? super T> action) 로 정의되어 있음
-        String[] strArr = {"aaa", "ccc", "bbb"};
-        Arrays.stream(strArr).filter(t->t.length()>5).sorted().forEach(str -> System.out.print(str));
+        Consumer<String> consumer = t -> System.out.println(t + "8");
+        consumer.accept("자바");
+
 
         //Supplier
         //인자없음, 리턴 있음
