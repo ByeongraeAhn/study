@@ -2,7 +2,6 @@ package app.Lambda;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -41,9 +40,10 @@ public class Sample {
         //인자있음, 리턴 없음
         //Stream 인터페이스의 forEach 메서드는 void forEach(Consumer<? super T> action) 로 정의되어 있음
         String[] strArr = {"aaa", "ccc", "bbb"};
-        Arrays.stream(strArr).sorted().forEach(str -> System.out.print(str));
+        Arrays.stream(strArr).filter(t->t.length()>5).sorted().forEach(str -> System.out.print(str));
 
         //Supplier
+        //인자없음, 리턴 있음
         //때문에 랜덤함수것을 쓰지 않는 이상 통상적으로 같은 결과를 리턴함
         Supplier<String> supplier = () -> "msg from supplier";
         String result4 = supplier.get();
