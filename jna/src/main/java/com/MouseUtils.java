@@ -13,6 +13,7 @@ public class MouseUtils {
       public static final long MOUSEEVENTF_ABSOLUTE = 0x8000L;
 
       User32 INSTANCE = (User32) Native.loadLibrary("user32", User32.class);
+      // User32 INSTANCE = (User32) Native.loadLibrary("testtest", User32.class);
 
       DWORD SendInput(DWORD dWord, INPUT[] input, int cbSize);
 
