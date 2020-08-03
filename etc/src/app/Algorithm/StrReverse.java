@@ -1,4 +1,4 @@
-package app.Algorithm;
+package app.algorithm;
 
 public class StrReverse {
 

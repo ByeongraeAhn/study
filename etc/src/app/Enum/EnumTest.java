@@ -1,4 +1,4 @@
-package app.Enum;
+package app.enum;
 
 enum PowerSwitch {
     //

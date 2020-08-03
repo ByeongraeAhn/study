@@ -1,4 +1,4 @@
-package app.Thread;
+package app.thread;
 
 public class ThreadTest5 {
     public static void main(String args[]) {

@@ -1,4 +1,4 @@
-package app.Lambda;
+package app.lambda;
 
 // 두개의 숫자 더하기
 public class LambdaTest2 {
