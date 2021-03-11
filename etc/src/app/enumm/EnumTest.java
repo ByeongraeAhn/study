@@ -1,7 +1,7 @@
 package app.enumm;
 
 enum PowerSwitch {
-    ON("켜짐",true), OFF("꺼짐",false), Cff(value -> value);
+    ON("켜짐",true), OFF("꺼짐",false);
 
     private String krName;
     private boolean flag;
