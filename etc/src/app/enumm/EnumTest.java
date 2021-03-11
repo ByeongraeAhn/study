@@ -1,7 +1,7 @@
 package app.enumm;
 
 enum PowerSwitch {
-    ON("켜짐",true), OFF("꺼짐",false);
+    ON("켜짐",true), OFF("꺼짐",false), Cff(value -> value);
 
     private String krName;
     private boolean flag;
@@ -10,6 +10,8 @@ enum PowerSwitch {
         //
     }
 
+    // PowerSwitch powerSwitch = PowerSwitch.ON;
+    // ON에 해당("켜짐", true)하는 생성자가 호출된다.
     private PowerSwitch(String krName, boolean flag) {
         this.krName = krName;
         this.flag = flag;
