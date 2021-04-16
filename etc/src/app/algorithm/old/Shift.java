@@ -1,4 +1,4 @@
-package app.algorithm;
+package app.algorithm.old;
 
 public class Shift {
 	public static void main(String[] args) {
