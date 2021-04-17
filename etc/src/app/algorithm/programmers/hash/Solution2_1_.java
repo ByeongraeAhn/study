@@ -2,7 +2,7 @@ package app.algorithm.programmers.hash;
 
 import java.util.*;
 
-public class Solution2_1 {
+public class Solution2_1_ {
     public static void main(String[] args) {
 
         //String[] participant = {"leo", "kiki", "eden"};

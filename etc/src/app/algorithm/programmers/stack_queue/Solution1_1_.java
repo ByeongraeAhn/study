@@ -2,7 +2,7 @@ package app.algorithm.programmers.stack_queue;
 
 import java.util.*;
 
-public class Solution1_1 {
+public class Solution1_1_ {
     public static void main(String[] args) {
 
         String[] phone_book = {"119", "97674223", "1195524421"};
