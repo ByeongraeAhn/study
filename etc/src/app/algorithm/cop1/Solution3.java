@@ -1,17 +1,13 @@
 public class Solution3 {
     public static void main(String[] args) {
 
-        int a[][] = {{4,3,4,5,3}, {2,7,3,8,4}, {1,7,6,5,2}, {8,4,9,5,5}}; //3
-        System.out.println(solution(a));
+        System.out.println(solution(new int[][]{{4,3,4,5,3}, {2,7,3,8,4}, {1,7,6,5,2}, {8,4,9,5,5}})); //return 3
 
-        // int b[][] = {{2,2,1,1}, {2,2,2,2}, {1,2,2,2}}; //2
-        // System.out.println(solution(b));
+        System.out.println(solution(new int[][]{{2,2,1,1}, {2,2,2,2}, {1,2,2,2}})); //return 2
 
-        // int c[][] = {{7,2,4}, {2,7,6}, {9,5,1}, {4,3,8}, {3,5,4}}; //3
-        // System.out.println(solution(c));
+        System.out.println(solution(new int[][]{{7,2,4}, {2,7,6}, {9,5,1}, {4,3,8}, {3,5,4}})); //return 3
 
-        // int d[][] = {{2,2,2,2}, {2,2,2,2}, {2,2,2,2}, {2,2,2,2}}; //4
-        // System.out.println(solution(d));
+        System.out.println(solution(new int[][]{{2,2,2,2}, {2,2,2,2}, {2,2,2,2}, {2,2,2,2}})); //return 4
     }
 
     public static int solution(int[][] A) {
