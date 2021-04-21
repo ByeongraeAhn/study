@@ -12,29 +12,17 @@ public class Test1_2 {
 
     public static int solution(int[] A) {
 
-        NavigableMap<Integer, Integer> rankCount = new TreeMap<>();
+        int cnt = 0;
 
-        // init map
-        for (int soldier : A) {
-            Integer count = rankCount.getOrDefault(soldier, 0);
-            rankCount.put(soldier, count + 1);
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A.length; j++) {
+                if(A[i] + 1 == A[j]) {
+                    cnt++;
+                    break;
+                }
+            }
         }
 
-        int result = 0;
-        int general = rankCount.lastKey();
-        int prevRank = general;
-
-        for (Integer rank : rankCount.descendingKeySet()) {
-            if (rank.equals(general)) {
-                continue;
-            }
-
-            if (prevRank - rank == 1) {
-                result += rankCount.get(rank);
-            }
-            prevRank = rank;
-        }
-
-        return result;
+        return cnt;
     }
 }

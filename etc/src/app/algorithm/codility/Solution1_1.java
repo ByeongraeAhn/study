@@ -1,3 +1,5 @@
+package app.algorithm.codility;
+
 import java.util.*;
 
 public class Solution1_1 {

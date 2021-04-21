@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Test2 {
+public class Test2_2 {
     
     public static void main(String[] args) {
 
@@ -14,18 +14,20 @@ public class Test2 {
 
     public static int solution(String S) {
 
-        int result = 0;
-        Set<String> tmp = new HashSet<>();
+        String[] stringArray = S.split("");
 
-        for (int i = 0; i < S.length(); i++) {
-            String partial = S.substring(i, i + 1);
-            if (tmp.contains(partial)) {
-                result++;
-                tmp.clear();
+        int cnt = 0;
+
+        for (int i = 0; i < stringArray.length - 1; i++) {
+            for (int j = i + 1; j < stringArray.length; j++) {
+                if(stringArray[i].equals(stringArray[j])) { // 2로
+                    cnt++;
+                    i = j;
+                }
             }
-            tmp.add(partial);
+            
         }
 
-        return result + 1;
+        return cnt + 1;
     }
 }
