@@ -2,11 +2,11 @@ package com.example.demo.web;
 
 import java.util.List;
 
+import com.example.demo.config.PerfLogging;
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +24,7 @@ public class HelloController {
 
     // curl -H "Content-Type: application/json" -X POST -d '{"firstName":"BR", "lastName":"AHN"}' http://localhost:8080/user
     @PostMapping
+    @PerfLogging
     public User save(@RequestBody User user) throws Exception {
 
         User responseUser = userRepository.save(user);
