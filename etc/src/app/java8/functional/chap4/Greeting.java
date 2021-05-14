@@ -1,4 +1,4 @@
-package app.java8.chap4;
+package app.java8.functional.chap4;
 
 public class Greeting {
 

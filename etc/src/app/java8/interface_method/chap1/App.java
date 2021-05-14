@@ -1,4 +1,4 @@
-package app.java8.chap5;
+package app.java8.interface_method.chap1;
 
 public class App {
 

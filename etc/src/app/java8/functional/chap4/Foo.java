@@ -1,4 +1,4 @@
-package app.java8.chap4;
+package app.java8.functional.chap4;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

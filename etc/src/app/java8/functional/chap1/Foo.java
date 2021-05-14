@@ -1,4 +1,4 @@
-package app.java8.chap1;
+package app.java8.functional.chap1;
 
 public class Foo {
 

@@ -1,4 +1,4 @@
-package app.java8.chap3;
+package app.java8.functional.chap3;
 
 import java.util.function.Consumer;
 import java.util.function.IntConsumer;
