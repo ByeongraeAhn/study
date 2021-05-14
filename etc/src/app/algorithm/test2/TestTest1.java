@@ -1,3 +1,5 @@
+package app.algorithm.test2;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;

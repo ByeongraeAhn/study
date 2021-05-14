@@ -1,3 +1,5 @@
+package app.algorithm.cop1;
+
 import java.util.*;
 
 public class Solution2 {

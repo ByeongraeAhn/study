@@ -1,3 +1,5 @@
+package app.algorithm.cop1;
+
 public class Solution3 {
     public static void main(String[] args) {
 

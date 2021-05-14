@@ -1,3 +1,5 @@
+package app.algorithm.test;
+
 import java.util.*;
 
 public class Test1_2 {

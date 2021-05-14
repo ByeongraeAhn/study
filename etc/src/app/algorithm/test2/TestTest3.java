@@ -1,3 +1,5 @@
+package app.algorithm.test2;
+
 public class TestTest3 {
     
     public static void main(String[] args) {

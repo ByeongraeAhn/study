@@ -1,3 +1,5 @@
+package app.algorithm.test;
+
 import java.util.*;
 
 public class Test1_1 {
@@ -13,6 +15,8 @@ public class Test1_1 {
     public static int solution(int[] A) {
 
         NavigableMap<Integer, Integer> rankCount = new TreeMap<>();
+
+        
 
         // init map
         for (int soldier : A) {

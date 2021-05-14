@@ -1,4 +1,7 @@
-import java.util.*;
+package app.algorithm.test2;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestTest2 {
     
@@ -9,6 +12,7 @@ public class TestTest2 {
     }
 
     public static String solution(int[] T) {
+
 
         int seasonInterval = T.length / 4; //2
 
