@@ -16,32 +16,30 @@ public class Foo {
     private void run() {
 
         //로컬 변수
-        int baseNumber = 10;
+        int baseNumber = 10; //사실상 final(effactive final)
         
 
         //1. 로컬 클래스
-        //섀도잉 된다
         class LocalClass {
             void printBaseNubmer() {
-                int baseNumber = 11;
+                int baseNumber = 11; //섀도잉 된다
                 System.out.println(baseNumber);
             }
         }
 
         //2. 익명 클래스
-        //섀도잉 된다
         Consumer<Integer> integerConsumer = new Consumer<Integer>(){
             @Override
-            public void accept(Integer baseNumber) {
+            public void accept(Integer baseNumber) { //섀도잉 된다
                 System.out.println(baseNumber);
             }
         };
+        integerConsumer.accept(12);
 
         //3. 람다
         //섀도잉 되지 않는다.
         IntConsumer printInt = (i) -> System.out.println(i + baseNumber);
         printInt.accept(10);
-
-        //baseNumber++;
+        //baseNumber++; //컴파일 에러
     } 
 }

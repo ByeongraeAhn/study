@@ -11,7 +11,7 @@ public interface RunSomthing {
     //interface의 static 메소드 
     //interface에서 메소드 구현이 가능하다.
     //반드시 클래스 명으로 메소드를 호출해야 한다.
-    //재정의 불가능!
+    //재정의 불가능
     static void printName() {
         System.out.println("안"); 
     }
