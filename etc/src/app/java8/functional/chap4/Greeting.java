@@ -11,11 +11,11 @@ public class Greeting {
         this.name = name;
     }
 
-    public String hello(String name) {
+    public String helloMethod(String name) {
         return "hello " + name;
     }
 
-    public static String hi(String name) {
+    public static String hiMethod(String name) {
         return "hi " + name;
     }
 

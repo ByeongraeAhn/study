@@ -12,11 +12,11 @@ public class Foo {
 
     public static void main(String[] args) {
 
-        UnaryOperator<String> hi = Greeting::hi; //스테틱 메서드 사용시
+        UnaryOperator<String> hi = Greeting::hiMethod; //스테틱 메서드 사용시
         System.out.println(hi.apply("anbr"));
 
         Greeting greeting = new Greeting();
-        UnaryOperator<String> hello = greeting::hello; //인스턴스 메서드 사용시
+        UnaryOperator<String> hello = greeting::helloMethod; //인스턴스 메서드 사용시
         System.out.println(hello.apply("anbr"));
 
         Supplier<Greeting> newGreeting = Greeting::new; //생성자 사용시(아규먼트 없음)
