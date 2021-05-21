@@ -12,7 +12,7 @@ public class Greeting {
     }
 
     public String helloMethod(String name) {
-        return "hello " + name;
+        return "hello " + name; 
     }
 
     public static String hiMethod(String name) {
