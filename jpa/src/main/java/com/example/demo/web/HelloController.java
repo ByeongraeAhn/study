@@ -7,13 +7,7 @@ import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
@@ -55,8 +49,11 @@ public class HelloController {
         return userList;
     }
 
+    // curl -H "Content-Type: application/json" -X DELETE http://localhost:8080/user/3
+    @DeleteMapping("/{id}")
+    public String delete (@PathVariable("id") Long id) throws Exception {
+        userRepository.deleteById(id);
 
-
-    
-
+        return "Delete Success";
+    }
 }
