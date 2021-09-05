@@ -1,4 +1,4 @@
-package app.lambda;
+package app.Lambda;
 
 // 람다 사용, 미사용 비교
 public class LambdaTest1 {

@@ -1,4 +1,4 @@
-package app.lambda;
+package app.Lambda;
 
 //두개의 수중 큰수 찾기
 public class LambdaTest3 {
