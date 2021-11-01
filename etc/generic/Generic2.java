@@ -1,6 +1,6 @@
 package generic;
 
-//제네릭을 사용하지 않아서, 코드 중복 발
+// Topic : 제네릭을 사용하지 않아서, 코드 중복 발생
 public class Generic2 {
 	public static void main(String[] args) {
 		StudentInfo si = new StudentInfo(2);

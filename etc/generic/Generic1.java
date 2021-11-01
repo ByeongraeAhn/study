@@ -1,5 +1,6 @@
 package generic;
 
+// Topic : 제네릭의 사용
 public class Generic1 {
 
 	public static void main(String[] args) {
