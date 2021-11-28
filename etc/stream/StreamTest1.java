@@ -110,6 +110,26 @@ public class StreamTest1 {
         //만약 스트림이 비어 있는 경우 count 와 sum 은 0을 출력하면 된다. 하지만 평균, 최소, 최대의 경우에는 표현할 수가 없기 때문에 Optional 을 이용해 리턴합니다.
         OptionalInt min = IntStream.of(1, 3, 5, 7, 9).min();
         OptionalInt max = IntStream.of(1, 3, 5, 7, 9).max();
+        //스트림에서 바로 ifPresent 메소드를 이용해서 Optional 을 처리할 수 있다.
+        DoubleStream.of(1.1, 2.2, 3.3, 4.4, 5.5).average().ifPresent(System.out::println);
+
+        //Reduction
+        //스트림은 reduce라는 메소드를 이용해서 결과를 만들어낸다.
+        //reduce 메소드는 총 세 가지의 파라미터를 받을 수 있다.
+        //accumulator : 각 요소를 처리하는 계산 로직. 각 요소가 올 때마다 중간 결과를 생성하는 로직.
+        //identity : 계산을 위한 초기값으로 스트림이 비어서 계산할 내용이 없더라도 이 값은 리턴.
+        //combiner : 병렬(parallel) 스트림에서 나눠 계산한 결과를 하나로 합치는 동작하는 로직.
+
+        //1 + 2 + 3 = 6
+        OptionalInt reduced = IntStream.range(1, 4)
+                .reduce((a, b) -> {
+                    return Integer.sum(a, b);
+                });
+
+        //10 + 1 + 2 + 3 = 16
+        int reducedTwoParams = IntStream.range(1, 4)
+                .reduce(10, Integer::sum); // method reference
+
 
     }
 
